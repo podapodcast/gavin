@@ -107,8 +107,8 @@
             cursor: pointer;
         }
 
-        #amount {
-            font-size: 24px;
+         #congrats-message {
+            font-size: 18px;
             font-weight: bold;
             color: #000;
             margin-bottom: 20px;
@@ -125,25 +125,47 @@
             border-radius: 5px;
         }
 
+        .ribbon {
+            position: fixed;
+            width: 10px;
+            height: 30px;
+            background-color: #FFD700;
+            top: -50px;
+            animation: fall 4s linear infinite;
+        }
+
+        .ribbon:nth-child(2n) {
+            background-color: #FFD700;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
         /* Media queries for responsiveness */
         @media (max-width: 768px) {
             .card {
                 padding: 15px 30px;
-                width: 80%; /* Adjust as needed */
+                width: 80%;
             }
 
             #modal {
-                width: 80%; /* Adjust as needed */
+                width: 80%;
             }
         }
 
         @media (max-width: 480px) {
             .card {
-                width: 95%; /* Adjust as needed */
+                width: 95%;
             }
 
             #modal {
-                width: 95%; /* Adjust as needed */
+                width: 95%;
             }
         }
     </style>
